@@ -1,2 +1,1 @@
-# quiz
-Quiz App in php and MySQLi
+# Quiz App in php and MySQLi
