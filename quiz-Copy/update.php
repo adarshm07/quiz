@@ -6,7 +6,7 @@ $email=$_SESSION['email'];
 //delete feedback
 if(isset($_SESSION['key']))
 {
-	if(@$_GET['fdid'] && $_SESSION['key']=='vaibhav9752074007') 
+	if(@$_GET['fdid'] && $_SESSION['key']=='1234') 
 	{
 		$id=@$_GET['fdid'];
 		$result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
@@ -17,7 +17,7 @@ if(isset($_SESSION['key']))
 //delete user
 if(isset($_SESSION['key']))
 {
-	if(@$_GET['demail'] && $_SESSION['key']=='vaibhav9752074007') 
+	if(@$_GET['demail'] && $_SESSION['key']=='1234') 
 	{
 		$demail=@$_GET['demail'];
 		$r1 = mysqli_query($con,"DELETE FROM rank WHERE email='$demail' ") or die('Error');
@@ -30,7 +30,7 @@ if(isset($_SESSION['key']))
 //remove quiz
 if(isset($_SESSION['key']))
 {
-	if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='vaibhav9752074007') 
+	if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='1234') 
 	{
 		$eid=@$_GET['eid'];
 		$result = mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' ") or die('Error');
@@ -50,7 +50,7 @@ if(isset($_SESSION['key']))
 //add quiz
 if(isset($_SESSION['key']))
 {
-	if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='vaibhav9752074007') 
+	if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='1234') 
 	{
 		$name = $_POST['name'];
 		$name = ucwords(strtolower($name));
@@ -70,7 +70,7 @@ if(isset($_SESSION['key']))
 //add question
 if(isset($_SESSION['key']))
 {
-	if(@$_GET['q']== 'addqns' && $_SESSION['key']=='vaibhav9752074007') 
+	if(@$_GET['q']== 'addqns' && $_SESSION['key']=='1234') 
 	{
 		$n=@$_GET['n'];
 		$eid=@$_GET['eid'];
@@ -182,7 +182,7 @@ if(@$_GET['q']== 'quiz' && @$_GET['step']== 2)
 		$sn++;
 		header("location:account.php?q=quiz&step=2&eid=$eid&n=$sn&t=$total")or die('Error152');
 	}
-	else if( $_SESSION['key']!='vaibhav9752074007')
+	else if( $_SESSION['key']!='1234')
 	{
 		$q=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error156');
 		while($row=mysqli_fetch_array($q) )
